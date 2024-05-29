@@ -14,7 +14,7 @@ const App = () => {
         </Typography>
         <Routes>
           <Route path="/" element={<TaskForm/>} />
-          <Route exact path="/task-list" element={<TaskList/>} />
+          <Route path="/task-list" element={<TaskList/>} />
           <Route path="/task/:id" element={<TaskDetails/>} />
         </Routes>
       </Container>

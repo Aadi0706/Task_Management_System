@@ -1,86 +1,3 @@
-// import React, { useState } from 'react';
-// import { TextField, Button, MenuItem, Grid } from '@mui/material';
-// import axios from 'axios';
-
-// const TaskForm = () => {
-//   const [title, setTitle] = useState('');
-//   const [description, setDescription] = useState('');
-//   const [dueDate, setDueDate] = useState('');
-//   const [priority, setPriority] = useState('');
-
-//   const handleSubmit = async (e) => {
-//     e.preventDefault();
-//     const newTask = { title, description, dueDate, priority };
-//     await axios.post('http://localhost:8080/tasks', newTask);
-//     // fetchTasks();
-//     setTitle('');
-//     setDescription('');
-//     setDueDate('');
-//     setPriority('');
-//   };
-
-//   return (
-//     <form onSubmit={handleSubmit}>
-//       <Grid container spacing={2}>
-//         <Grid item xs={12}>
-//           <TextField
-//             label="Title"
-//             variant="outlined"
-//             fullWidth
-//             value={title}
-//             onChange={(e) => setTitle(e.target.value)}
-//             required
-//           />
-//         </Grid>
-//         <Grid item xs={12}>
-//           <TextField
-//             label="Description"
-//             variant="outlined"
-//             fullWidth
-//             value={description}
-//             onChange={(e) => setDescription(e.target.value)}
-//             required
-//           />
-//         </Grid>
-//         <Grid item xs={12}>
-//           <TextField
-//             label="Due Date"
-//             type="date"
-//             InputLabelProps={{ shrink: true }}
-//             variant="outlined"
-//             fullWidth
-//             value={dueDate}
-//             onChange={(e) => setDueDate(e.target.value)}
-//             required
-//           />
-//         </Grid>
-//         <Grid item xs={12}>
-//           <TextField
-//             label="Priority"
-//             select
-//             variant="outlined"
-//             fullWidth
-//             value={priority}
-//             onChange={(e) => setPriority(e.target.value)}
-//             required
-//           >
-//             <MenuItem value="High">High</MenuItem>
-//             <MenuItem value="Medium">Medium</MenuItem>
-//             <MenuItem value="Low">Low</MenuItem>
-//           </TextField>
-//         </Grid>
-//         <Grid item xs={12}>
-//           <Button type="submit" variant="contained" color="primary">
-//             Add Task
-//           </Button>
-//         </Grid>
-//       </Grid>
-//     </form>
-//   );
-// };
-
-// export default TaskForm;
-
 import React, { useState } from 'react';
 import axios from 'axios';
 import { TextField, Button, Grid, Container, Typography, MenuItem, Select, FormControl, InputLabel, Box } from '@mui/material';
@@ -91,7 +8,7 @@ const TaskForm = () => {
   const [description, setDescription] = useState('');
   const [dueDate, setDueDate] = useState('');
   const [priority, setPriority] = useState('');
-  const [status, setStatus] = useState('pending');
+  const [status, setStatus] = useState('pending'); // Set default status
   const history = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -99,7 +16,7 @@ const TaskForm = () => {
     const newTask = { title, description, dueDate, priority, status };
     try {
       await axios.post('http://localhost:8080/tasks', newTask);
-      history.push('/task-list');
+      history('/task-list');
     } catch (error) {
       console.error('Error creating task:', error);
     }
@@ -181,4 +98,3 @@ const TaskForm = () => {
 };
 
 export default TaskForm;
-
