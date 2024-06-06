@@ -8,7 +8,7 @@ import {
 import { Link } from 'react-router-dom';
 import DeleteIcon from '@mui/icons-material/Delete';
 
-const TaskList = () => {
+const TaskList = ({ authUser }) => {
   const [tasks, setTasks] = useState([]);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
@@ -17,14 +17,13 @@ const TaskList = () => {
   const tasksPerPage = 5;
 
   const fetchTotalTasks = async (priority = 'All') => {
-    let url = `http://localhost:8080/tasks`;
+    let url = `http://localhost:8080/tasks?userId=${authUser.id}`;
     if (priority !== 'All') {
-      url += `?priority=${priority}`;
+      url += `&priority=${priority}`;
     }
     try {
       const response = await axios.get(url);
       const totalTasks = response.data.length;
-      console.log(totalTasks,"totaltasksd....");
       setTotalPages(Math.ceil(totalTasks / tasksPerPage));
     } catch (error) {
       console.error('Error fetching total tasks:', error);
@@ -32,7 +31,7 @@ const TaskList = () => {
   };
 
   const fetchTasks = async (page = 1, priority = 'All') => {
-    let url = `http://localhost:8080/tasks?_page=${page}&_limit=${tasksPerPage}`;
+    let url = `http://localhost:8080/tasks?_page=${page}&_limit=${tasksPerPage}&userId=${authUser.id}`;
     if (priority !== 'All') {
       url += `&priority=${priority}`;
     }

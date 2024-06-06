@@ -1,0 +1,15 @@
+.InputBox{
+    display: flex;
+    flex-direction: column;
+}
+.Input{
+    width: 20%;
+    margin: 60px;
+}
+.password{
+    width: 20%;
+    margin: 2%;
+}
+.login{
+    width: 20%;
+}

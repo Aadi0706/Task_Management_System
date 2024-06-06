@@ -1,84 +1,60 @@
 {
   "tasks": [
     {
-      "id": "1",
-      "title": "Task 1",
-      "description": "Description 1",
-      "dueDate": "2024-05-30",
+      "id": 1,
+      "title": "Sample Task",
+      "description": "This is a sample task",
+      "dueDate": "2023-12-31",
       "priority": "High",
-      "status": "pending"
+      "status": "pending",
+      "userId": 1
     },
     {
-      "id": "2",
-      "title": "Task 2",
-      "description": "Description 2",
-      "dueDate": "2024-05-31",
-      "priority": "Medium",
-      "status": "pending"
-    },
-    {
-      "id": "d83b",
-      "title": "task 3",
-      "description": "Description 3",
-      "dueDate": "2024-05-17",
-      "priority": "Low",
-      "status": "pending"
-    },
-    {
-      "id": "c6cf",
-      "title": "task 4",
-      "description": "description 4",
-      "dueDate": "2024-05-19",
+      "title": "task 1 of user 2",
+      "description": "description 1 of user 2",
+      "dueDate": "2024-06-04",
       "priority": "High",
-      "status": "pending"
+      "status": "pending",
+      "userId": 2,
+      "id": 2
     },
     {
-      "id": "25ec",
-      "title": "task 5",
-      "description": "description 5",
-      "dueDate": "2023-06-23",
-      "priority": "Medium",
-      "status": "pending"
-    },
-    {
-      "id": "d694",
-      "title": "task 6",
-      "description": "Description 6",
-      "dueDate": "2024-05-17",
-      "priority": "Low",
-      "status": "pending"
-    },
-    {
-      "id": "b030",
-      "title": "task7 ",
-      "description": "Description 7",
-      "dueDate": "2024-03-09",
-      "priority": "Low",
-      "status": "pending"
-    },
-    {
-      "id": "8f68",
-      "title": "task 8",
-      "description": "description 8",
+      "title": "task 1 of user 3",
+      "description": "description 1 of user 3",
       "dueDate": "2024-05-03",
       "priority": "Medium",
-      "status": "pending"
+      "status": "pending",
+      "userId": 3,
+      "id": 3
     },
     {
-      "id": "85f8",
-      "title": "task 9",
-      "description": "Description 9",
-      "dueDate": "2024-05-01",
-      "priority": "High",
-      "status": "pending"
+      "title": "task 2 of user 3",
+      "description": "description of user 3",
+      "dueDate": "2024-06-02",
+      "priority": "Medium",
+      "status": "completed",
+      "userId": 3,
+      "id": 4
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "user1",
+      "password": "password1",
+      "role": "user"
     },
     {
-      "id": "7b9c",
-      "title": "task 9",
-      "description": "Description 9",
-      "dueDate": "2024-05-01",
-      "priority": "High",
-      "status": "pending"
+      "username": "user2",
+      "password": "user2",
+      "role": "user",
+      "id": 2
+    },
+    {
+      "username": "user3",
+      "password": "user3",
+      "role": "user",
+      "id": 3
     }
   ]
 }
