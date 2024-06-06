@@ -1,0 +1,13 @@
+.SignUpBox{
+    display: flex;
+    flex-direction: column;
+}
+.username{
+    width: 20%;
+}
+.password{
+    width: 20%;
+}
+.btnSignUp{
+   width: 20%;
+}
