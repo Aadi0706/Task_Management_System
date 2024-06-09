@@ -1,14 +1,21 @@
 .InputBox{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    /* border: 2px solid red; */
+    height: 200px;
+    margin: 20px;
 }
-.Input{
-    width: 20%;
-    margin: 60px;
+#Inp{
+    /* border: 2px solid black; */
+    width: 300px;
+    /* margin-bottom: 20px; */
+    /* padding-bottom: 20px; */
+    
 }
 .password{
     width: 20%;
-    margin: 2%;
+    /* margin-top: 10px; */
 }
 .login{
     width: 20%;

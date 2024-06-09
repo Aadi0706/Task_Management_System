@@ -28,10 +28,12 @@ const Login = ({ setAuthUser }) => {
 
   return (
     <Box>
-      <Typography variant="h4" gutterBottom>Login Page</Typography>
+      <Typography variant="h4" gutterBottom align='center' margin="8px">Login Page</Typography>
       <Box className="InputBox">
-      <TextField label="Username" value={username} onChange={(e) => setUsername(e.target.value)} className="Input"   />
+      <TextField id="Inp" label="Username" value={username} onChange={(e) => setUsername(e.target.value)}    />
+      <br/>
       <TextField label="Password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="password" />
+      <br/>
       <Button variant="contained" color="primary" onClick={handleLogin} className="login">Login</Button>
       </Box>
       <Typography variant="body2" align="center">

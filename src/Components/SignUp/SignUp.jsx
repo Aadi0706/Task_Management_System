@@ -20,10 +20,13 @@ const Signup = () => {
 
   return (
     <Box className="SignUpBox">
-      <Typography variant="h4" gutterBottom>Signup Page</Typography>
+      <Typography variant="h4" gutterBottom>Sign Up Page</Typography>
       <TextField label="Username" value={username} onChange={(e) => setUsername(e.target.value)} className="username" />
+      <br/>
       <TextField label="Password" type="password" value={password} onChange={(e) => setPassword(e.target.value)}  className='password'/>
+      <br/>
       <Button variant="contained" color="primary" onClick={handleSignup} className='btnSignUp' >Signup</Button>
+      <br/>
       <Typography variant="body2" align="center">
         Already have an account? <Link href="/login">Login here</Link>
       </Typography>
